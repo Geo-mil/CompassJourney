@@ -22,7 +22,7 @@ document.getElementById("searchBtn")?.addEventListener("click", function () {
         results = travelData.beaches;
     } else if (input.includes("temple")) {
         results = travelData.temples;
-    } else {
+    } else if (input !== "") {
         const country = travelData.countries.find(country => country.name.toLowerCase().includes(input));
         if(country) results = country.cities;
     }
